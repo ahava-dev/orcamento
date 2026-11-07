@@ -11,7 +11,7 @@ export async function createClient() {
         getAll() {
           return store.getAll();
         },
-setAll(list: { name: string; value: string; options: CookieOptions }[]) {
+          setAll(list: { name: string; value: string; options: CookieOptions }[]) {
           try {
             list.forEach(({ name, value, options }) => store.set(name, value, options));
           } catch {
